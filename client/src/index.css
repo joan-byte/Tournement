@@ -1,0 +1,550 @@
+/* Estilos generales */
+
+body {
+    background-color: #e6f2ff;  /* Fondo azul claro para el cuerpo del documento */
+    color: #333;  /* Texto oscuro */
+}
+
+/* Estilos para formularios */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaccee;  /* Borde en tono azul medio */
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-checkbox {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilos para tablas */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #aaccee;  /* Borde azul medio */
+    padding: 8px;
+}
+
+table th {
+    background-color: #003366;  /* Fondo azul marino para encabezados de tabla */
+    color: white;  /* Texto blanco para encabezados */
+}
+
+table tbody tr {
+    background-color: #e6f2ff;  /* Fondo azul claro para las filas de la tabla */
+}
+
+/* Estilos para botones */
+
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #aaccee;  /* Color de fondo azul medio para botones primarios */
+    border: none;
+    color: #003366;  /* Texto azul marino para botones primarios */
+}
+
+.btn-primary:hover {
+    background-color: #88bbe8;  /* Color de fondo azul más oscuro al pasar el ratón por encima */
+    color: #003366;
+}
+
+/* Estilos para campos de formulario */
+
+.form-control {
+    background-color: #e6f2ff;  /* Fondo azul claro para campos de formulario */
+    color: #333;  /* Texto oscuro para el texto en campos de formulario */
+    border: 1px solid #aaccee;  /* Borde azul medio para campos de formulario */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: #88bbe8;  /* Color de borde azul más oscuro al enfocar el campo */
+    box-shadow: none;  /* Eliminar el efecto de sombra predeterminado al enfocar */
+}
+
+/* Estilos para la barra de navegación */
+
+.navbar {
+    background-color: #003366 !important;  /* Fondo azul marino para la barra de navegación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;  /* Sombra sutil para la barra de navegación */
+}
+
+.navbar .navbar-nav .nav-link, .navbar .navbar-brand, .navbar .nav-dropdown-item {
+    color: white !important;  /* Texto blanco para los enlaces y texto de la barra de navegación */
+}
+
+.navbar .navbar-nav .nav-link:hover, .navbar .nav-dropdown-item:hover {
+    background-color: #004c80 !important;  /* Fondo azul un poco más claro al pasar el ratón por encima de los enlaces */
+    color: white !important;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    background-color: #005599 !important;  /* Fondo azul aún más claro para el enlace activo */
+    color: white !important;
+}
+
+.nav-dropdown.show .nav-dropdown-toggle, .nav-dropdown-item.active {
+    background-color: #005599 !important;  /* Fondo azul más claro para los ítems desplegables activos */
+    color: white !important;
+}
+
+/* Estilos para CaracterCard */
+
+.caracter-card {
+    background-color: #e6f2ff;  /* Fondo azul claro para las tarjetas de características */
+    border: 1px solid #aaccee;  /* Borde azul medio para las tarjetas */
+    padding: 15px;
+    border-radius: 5px;  /* Bordes redondeados para las tarjetas */
+    margin-bottom: 20px;  /* Margen inferior para separación entre tarjetas */
+    cursor: pointer;  /* Cambiar el cursor a mano al pasar el ratón por encima */
+    transition: background-color 0.3s;  /* Transición suave para el cambio de fondo */
+}
+
+.caracter-card:hover {
+    background-color: #cce4ff;  /* Fondo ligeramente más claro al pasar el ratón por encima */
+}
+
+.caracter-title {
+    font-size: 1.5em;  /* Tamaño de fuente más grande para el título de la tarjeta */
+    color: #003366;  /* Texto azul marino para el título */
+    margin-bottom: 10px;  /* Margen inferior para separación con el contenido siguiente */
+}
+
+.caracter-card hr {
+    border-top: 1px solid #aaccee;  /* Línea de separación azul medio */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* Estilos para MesasFormPages */
+
+.mesas-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e6f2ff;  /* Fondo azul claro para el contenedor */
+}
+
+.mesas-form-title {
+    font-size: 2em;  /* Tamaño de fuente grande para el título del formulario */
+    color: #003366;  /* Texto azul marino para el título */
+    margin-bottom: 20px;  /* Margen inferior para separación con el formulario */
+}
+
+.mesas-form {
+    width: 100%;
+    max-width: 400px;  /* Ancho máximo para el formulario */
+}
+
+.mesas-form-label {
+    display: block;  /* Asegurarse de que la etiqueta ocupe toda la línea */
+    margin-bottom: 8px;  /* Margen inferior para separación con el input */
+    font-size: 1.1em;  /* Tamaño de fuente ligeramente más grande para las etiquetas */
+}
+
+.mesas-form-input {
+    width: 100%;  /* Ocupar todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 15px;  /* Margen inferior para separación entre campos */
+    border: 1px solid #aaccee;  /* Borde azul medio */
+    border-radius: 5px;
+    font-size: 1em;  /* Tamaño de fuente estándar para los inputs */
+}
+
+.mesas-form-button, .mesas-form-button-delete {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.1em;  /* Tamaño de fuente ligeramente más grande para los botones */
+    cursor: pointer;  /* Cambiar el cursor a mano al pasar el ratón por encima */
+}
+
+.mesas-form-button {
+    background-color: #aaccee;  /* Color de fondo azul medio para botón guardar */
+    color: #003366;  /* Texto azul marino */
+    margin-right: 10px;  /* Margen a la derecha para separación con el botón eliminar */
+}
+
+.mesas-form-button-delete {
+    background-color: #ff6666;  /* Color de fondo rojo para botón eliminar */
+    color: white;  /* Texto blanco */
+}
+/* Estilos para MesasCard */
+
+.mesas-card {
+    background-color: #003366;  /* Fondo azul marino para la tarjeta */
+    width: 18%;
+    margin: 1%;
+    border-radius: 5px;  /* Bordes redondeados para la tarjeta */
+    cursor: pointer;  /* Cambiar el cursor a mano al pasar el ratón por encima */
+    transition: background-color 0.3s;  /* Transición suave para el cambio de fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150%;  /* Puedes ajustar este valor si es necesario */
+}
+.mesas-card-text {
+    margin: auto;
+}
+.mesas-card:hover {
+    background-color: #004c80;  /* Fondo ligeramente más claro al pasar el ratón por encima */
+}
+
+.mesas-card-text {
+    color: white;  /* Texto blanco para la información de la tarjeta */
+    padding: 10px;  /* Relleno para separar el texto de los bordes de la tarjeta */
+    font-size: 1.1em;  /* Tamaño de fuente ligeramente más grande para el texto de la tarjeta */
+}
+
+.mesas-card-divider {
+    border-top: 1px solid #aaccee;  /* Línea de separación azul medio */
+}
+/* Estilos para InscripcionList */
+
+.inscripcion-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.inscripcion-table th, .inscripcion-table td {
+    border: 1px solid #003366;  /* Borde azul marino para las celdas */
+    padding: 8px;
+}
+
+.centered {
+    text-align: center;  /* Texto centrado para las celdas con clase "centered" */
+}
+
+.btn-primary {
+    padding: 10px 15px;
+    background-color: #003366;  /* Fondo azul marino para el botón */
+    color: white;  /* Texto blanco para el botón */
+    border: none;
+    border-radius: 5px;  /* Bordes redondeados para el botón */
+    cursor: pointer;  /* Cambiar el cursor a mano al pasar el ratón por encima */
+    transition: background-color 0.3s;  /* Transición suave para el cambio de fondo */
+}
+
+.btn-primary:hover {
+    background-color: #004c80;  /* Fondo ligeramente más claro al pasar el ratón por encima */
+}
+/* Estilo para el contenedor del botón de sorteo */
+.sorteo-button-container {
+    display: flex;
+    justify-content: center;  /* Centrar el contenido horizontalmente */
+    margin: 20px 0;  /* Margen superior e inferior de 20px */
+}
+/* Estilos para InscripcionFormPages */
+/* Contenedor principal del formulario de inscripción */
+.inscripcion-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Fila que contiene los campos del formulario de inscripción */
+.inscripcion-form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Etiqueta de los campos del formulario de inscripción */
+.inscripcion-form-label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Input de los campos del formulario de inscripción */
+.inscripcion-form-input {
+    flex: 2;
+    margin-right: 20px;
+}
+
+/* Sección que contiene los botones del formulario de inscripción */
+.inscripcion-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Botón "Guardar" */
+.btn-primary {
+    background-color: #3498db; /* Color de fondo azul */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Eliminar cualquier borde predeterminado */
+    padding: 10px 20px; /* Espaciado interno para que el botón sea más grande */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar el mouse por encima */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse por encima del botón "Guardar" */
+.btn-primary:hover {
+    background-color: #2980b9; /* Un tono de azul más oscuro al pasar el mouse por encima */
+    color: #ffffff; /* Asegurarse de que el texto sigue siendo blanco */
+}
+
+
+/* Botón "Borrar" en rojo */
+.inscripcion-form-button-right {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Eliminar cualquier borde predeterminado */
+    padding: 10px 20px; /* Espaciado interno para que el botón sea más grande */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar el mouse por encima */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse por encima del botón "Borrar" */
+.inscripcion-form-button-right:hover {
+    background-color: #c0392b; /* Un tono de rojo más oscuro al pasar el mouse por encima */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 200px; /* Espacio entre los botones */
+    margin-top: 20px; /* Separación vertical con respecto al contenido anterior */
+}
+.btn-primary:disabled {
+    background-color: #cccccc;  /* Color de fondo gris para botones deshabilitados */
+    color: #666666;  /* Color de texto gris oscuro para botones deshabilitados */
+    cursor: not-allowed;  /* Cambia el cursor a un símbolo de "no permitido" */
+}
+
+.btn-secondary {
+    background-color: #2ecc71;  /* Color de fondo verde para indicar que las inscripciones están abiertas */
+    margin-right: 200px;  /* Margen a la derecha para separar del botón Sorteo */
+    border: none;
+    color: #ffffff;  /* Texto blanco */
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    
+
+}
+
+.btn-secondary[data-closed="true"] {
+    background-color: #e74c3c;  /* Color de fondo rojo para indicar que las inscripciones están cerradas */
+}
+.partida-title {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2em;
+    font-style: bold;
+    background-color: #063e7a;
+    color: white;
+    border-bottom: 1px solid #aaccee;
+    margin-bottom: 20px;
+}
+/* Container for MesasPorNumero, based on the styles observed in index.css */
+.mesas-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the partida in MesasPorNumero */
+.mesas-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Table styles for MesasPorNumero */
+.mesas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mesas-table th, .mesas-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row styles for clickable rows in MesasPorNumero */
+.mesas-row:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+/* Setting a navy blue background color to the title container */
+.mesas-container {
+    background-color: #001F3F;  /* Navy blue background color */
+}
+
+/* Setting the title text color to white to contrast against the navy blue background */
+.mesas-title {
+    color: #ffffff;  /* White text color */
+    padding: 10px 0;  /* Padding to give some space above and below the title */
+}
+/* Adjusting the container to occupy full width with lateral margins */
+.mesas-container {
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Lateral padding of 20px on left and right */
+}
+/* Using a more specific selector to target the mesas-container */
+body .mesas-container {
+    width: calc(100% - 40px); /* Full width minus 40px for the combined left and right margins */
+    margin: 0 auto; /* Centers the container with auto margins on left and right */
+    padding: 0; /* Removing any padding */
+    background-color: #001F3F; /* Navy blue background color */
+}
+body .mesas-title {
+    color: #ffffff; /* White text color */
+    padding: 10px 0; /* Padding to give some space above and below the title */
+    text-align: center; /* Centering the title text */
+}
+/* Estilos específicos para ResultadosFormPages */
+
+/* Clase para hacer el campo de entrada del tamaño para 4 dígitos y alinear al lado del texto */
+.resultados-form-input {
+    width: 60px; /* Ajustado para 4 dígitos */
+    display: inline-block; /* Para alinear al lado del texto */
+    margin-left: 10px; /* Espaciado entre el texto y el input */
+    margin-top: 10px; /* Espaciado adicional arriba del input */
+}
+
+/* Clase para el contenedor de los resultados con fondo azul y centrado */
+.resultados-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; /* Alineación a la izquierda */
+    background-color: #003366; 
+    color: #D1D8E2;
+    font-size: 1.5rem; 
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+.resultados-container span {
+    margin-right: 20px; 
+
+}
+.resultados-container input {
+    width: 90px; /* Aproximadamente el tamaño para 6 dígitos, ajusta según sea necesario */
+    margin-right: 20px; /* Separación del lado derecho */
+  
+}
+
+
+/* Estilo para añadir más espacio a la derecha de elementos específicos */
+.espacio-derecho {
+    margin-right: 30px; /* Incrementado de 15px a 30px para más espacio */
+}
+/* Estilo para el título */
+.titulo {
+    font-size: 24px; /* Tamaño de texto grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para añadir espacio a la izquierda y a la derecha de los números específicos */
+.numero-margin {
+    margin-left: 20px;  /* Espacio a la izquierda */
+    margin-right: 50px; /* Espacio a la derecha */
+}
+/* Estilo para el contenedor principal */
+.contenedor-principal {
+    width: 1000px;  /* Establecer el ancho a 600px */
+    height: 400px; /* Establecer la altura a 400px */
+    margin: 50px auto;  /* Centrar el contenedor en la página */
+    background-color: #003366;
+    padding: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Style for enlarging and centering the checkbox */
+.mesas-table td:first-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mesas-table td:first-child input[type="checkbox"] {
+    transform: scale(1.5); /* Enlarging the checkbox */
+    margin: 0 auto; /* Centering the checkbox horizontally */
+}
+
+.mesas-item-container {
+    display: flex;
+    align-items: center;
+}
+
+.mesas-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+.mesas-checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.mesas-row {
+    line-height: 40px;
+    height: 40px;
+}
+/* Estilos para el botón "Modificar Resultado Mesa" */
+.btn-primary.inscripcion-form-button-left {
+    float: left; /* Hace que el botón flote a la izquierda */
+    margin-left: 20px; /* Ajusta la distancia al borde izquierdo */
+}
+
+/* Estilos para el botón "Eliminar Resultados" */
+.btn-danger.inscripcion-form-button-right {
+    float: right; /* Hace que el botón flote a la derecha */
+    margin-right: 20px; /* Ajusta la distancia al borde derecho */
+}
+
+/* Styles for table columns related to "Número de mesa" and "números de parejas" */
+table td:nth-child(1), table td:nth-child(2), table td:nth-child(4) {
+    width: 50px; /* Adjusted width for approx. 3 digits */
+}
+
+/* Styles for table columns related to "nombres de parejas" */
+table td:nth-child(3), table td:nth-child(5) {
+    width: 400px; /* Adjusted width for approx. 50 characters */
+}
