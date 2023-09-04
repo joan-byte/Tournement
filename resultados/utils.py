@@ -1,4 +1,4 @@
-def calcular_resultados(puntos_pareja_uno, puntos_pareja_dos):
+def calcular_resultados(res_par_uno, res_par_dos):
     """
     Calcula la diferencia de puntos entre las parejas y verifica que la suma de las diferencias sea 0.
     
@@ -14,14 +14,14 @@ def calcular_resultados(puntos_pareja_uno, puntos_pareja_dos):
     """
     
     # Calcular la diferencia de puntos de la pareja uno respecto a la pareja dos.
-    res_par_uno = puntos_pareja_uno - puntos_pareja_dos
+    puntos_pareja_uno = res_par_uno - res_par_dos
     
     # Calcular la diferencia de puntos de la pareja dos respecto a la pareja uno.
-    res_par_dos = puntos_pareja_dos - puntos_pareja_uno
+    puntos_pareja_dos = res_par_dos - res_par_uno
 
     # Verificar que la suma de las diferencias sea 0.
-    if res_par_uno + res_par_dos != 0:
-        raise ValueError("La suma de res_par_uno y res_par_dos debe ser 0")
+    if puntos_pareja_uno + puntos_pareja_dos != 0:
+        raise ValueError("La suma de puntos de la pareja uno y puntos de la pareja dos debe ser 0")
 
     # Retornar las diferencias calculadas.
-    return res_par_uno, res_par_dos
+    return puntos_pareja_uno, puntos_pareja_dos
