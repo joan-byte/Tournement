@@ -1,4 +1,4 @@
-// Importamos las dependencias necesarias para el componente.
+//Importamos las dependencias necesarias para el componente.
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { getMesa } from "../api/MesasApi";
@@ -32,6 +32,13 @@ export function ResultadosFormPages() {
         setResultados(prevState => ({ ...prevState, [name]: value }));
     };
 
+    // Función para marcar la mesa como guardada en localStorage
+    const markMesaAsGuardada = (mesaNumero) => {
+        const mesasGuardadas = JSON.parse(localStorage.getItem('mesasGuardadas')) || {};
+        mesasGuardadas[mesaNumero] = true;
+        localStorage.setItem('mesasGuardadas', JSON.stringify(mesasGuardadas));
+    };
+
     // Usamos el hook useEffect para hacer una llamada a la API cuando se carga el componente.
     useEffect(() => {
         async function fetchMesaDetails() {
@@ -59,7 +66,7 @@ export function ResultadosFormPages() {
             const response = await createResultado(dataToSend);
     
             if (response.status === 201) {
-                localStorage.setItem(`mesaEnviada_${mesaData.numero}`, 'true');
+                markMesaAsGuardada(mesaData.numero);  // Marca esta mesa como guardada en localStorage
                 navigate('/mesas-por-numero');  // Navega de vuelta a MesasPorNumero
             }
         } catch (error) {

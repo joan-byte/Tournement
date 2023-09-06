@@ -9,13 +9,13 @@ class Resultado(models.Model):
     nombre_pareja_uno = models.CharField(max_length=50, null=True, blank=True)
     puntos_pareja_uno = models.IntegerField(blank=True, null=True)
     n_pareja_dos = models.IntegerField(blank=True, null=True)
-
-    # Hacer el campo anulable
     nombre_pareja_dos = models.CharField(max_length=50, null=True, blank=True)
-
     puntos_pareja_dos = models.IntegerField(blank=True, null=True)
     res_par_uno = models.IntegerField()
     res_par_dos = models.IntegerField()
+
+    class Meta: # Clase para definir metadatos 
+        unique_together = ['mesa', 'partida']  # Añade la restricción única para 'mesa' y 'partida'
 
     def save(self, *args, **kwargs):
         self.puntos_pareja_uno, self.puntos_pareja_dos = calcular_resultados(self.res_par_uno, self.res_par_dos)
