@@ -6,7 +6,7 @@ function ResultadosCard({ resultado, resCerrado }) {
 
     // Renderizado del componente.
     return (
-        <tr style={{cursor: 'default'}}>
+        <tr className="resultados-table" style={{cursor: 'default'}}>
             <td className="centered">{resultado.id}</td>
             <td className="centered">{resultado.mesa}</td>
             <td className="centered">{resultado.partida}</td>

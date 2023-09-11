@@ -548,11 +548,27 @@ table td:nth-child(1), table td:nth-child(2), table td:nth-child(4) {
 table td:nth-child(3), table td:nth-child(5) {
     width: 400px; /* Adjusted width for approx. 50 characters */
 }
-/* Estilos ajustados para el nuevo orden de columnas */
-table td:nth-child(1) { width: 40px; } /* ID (assumed 3-4 digits) */
-table td:nth-child(2) { width: 50px; } /* Mesa (3 digits) */
-table td:nth-child(3) { width: 60px; } /* Partida (3-4 digits) */
-table td:nth-child(4), table td:nth-child(8) { width: 40px; } /* Número Pareja (3 digits) */
-table td:nth-child(5), table td:nth-child(9) { width: 200px; } /* Nombre Pareja (up to 50 characters) */
-table td:nth-child(6), table td:nth-child(10) { width: 50px; } /* Resultado Pareja (3-4 digits) */
-table td:nth-child(7), table td:nth-child(11) { width: 50px; } /* Puntos Pareja (3-4 digits) */
+/* Ajustando el ancho de las columnas con números en la tabla específica "resultados-table" */
+.resultados-table td:nth-child(1),  /* ID */
+.resultados-table td:nth-child(2),  /* Mesa */
+.resultados-table td:nth-child(3),  /* Partida */
+.resultados-table td:nth-child(4),  /* Número Pareja Uno */
+.resultados-table td:nth-child(6),  /* Resultado Pareja Uno */
+.resultados-table td:nth-child(7),  /* Puntos Pareja Uno */
+.resultados-table td:nth-child(8),  /* Número Pareja Dos */
+.resultados-table td:nth-child(10), /* Resultado Pareja Dos */
+.resultados-table td:nth-child(11)  /* Puntos Pareja Dos */
+{
+    width: 60px;
+    text-align: center;
+}
+
+/* Columnas con contenido de texto en la tabla específica "resultados-table" */
+.resultados-table td:nth-child(5),  /* Nombre Pareja Uno */
+.resultados-table td:nth-child(9)   /* Nombre Pareja Dos */
+{
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
