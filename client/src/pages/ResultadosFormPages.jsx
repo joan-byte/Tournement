@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { getMesa } from "../api/MesasApi";
-import { createResultado, updateResultado } from '../api/ResultadosApi';
+import { createResultado, updateResultado, getResultado} from '../api/ResultadosApi';
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 // Definimos el componente ResultadosFormPages. 
@@ -41,13 +41,26 @@ export function ResultadosFormPages() {
 
     // Usamos el hook useEffect para hacer una llamada a la API cuando se carga el componente.
     useEffect(() => {
-        async function fetchMesaDetails() {
+        async function fetchData() {
+            // Obtener detalles de la mesa
             const resMesa = await getMesa(id);
             console.log("Mesa data:", resMesa.data);
             setMesaData(resMesa.data);
+    
+            // Si la mesa tiene un resultado_id, obtener los resultados
+            if (resMesa.data.resultado_id) {
+                const resResultado = await getResultado(resMesa.data.resultado_id);
+                if (resResultado && resResultado.data) {
+                    setResultados({
+                        resultadoParejaUno: resResultado.data.res_par_uno || '',
+                        resultadoParejaDos: resResultado.data.res_par_dos || ''
+                    });
+                }
+            }
         }
-        fetchMesaDetails();
+        fetchData();
     }, [id]);
+    
 
     // Handler para guardar los resultados (acción POST)
     const handleSaveResults = async () => {
@@ -88,19 +101,22 @@ export function ResultadosFormPages() {
                 nombre_pareja_dos: mesaData.nombre_pareja_dos,
                 res_par_dos: parseInt(resultados.resultadoParejaDos),
             };
-            console.log("Data to send:", dataToSend);
-            // Aquí, usarías una función similar a createResultado pero para solicitudes PUT
-            // Suponiendo que "id" es el identificador del recurso que se desea actualizar
-            const response = await updateResultado(id, dataToSend); 
     
-            if (response.success) {
-                navigate('/mesas-por-numero');  // Navega de vuelta a MesasPorNumero
-                // Manejar el éxito, tal vez navegando a otra página o mostrando un mensaje de éxito
+            // Realizar la petición PUT para actualizar el resultado
+            // Utilizamos mesaData.resultado_id en lugar de id
+            const response = await updateResultado(mesaData.resultado_id, dataToSend);
+    
+            if (response.status === 200) {
+                console.log("Resultado actualizado con éxito!");
+                // Aquí puedes agregar más acciones, como mostrar un mensaje de éxito o redireccionar al usuario
+            } else {
+                console.error("Error al actualizar el resultado");
             }
         } catch (error) {
-            console.error("Error al actualizar los resultados:", error);
+            console.error("Ocurrió un error al actualizar el resultado:", error);
         }
     };
+    
     
     // A continuación, renderizamos el componente.
     return (
