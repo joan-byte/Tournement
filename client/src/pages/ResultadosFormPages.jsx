@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { getMesa } from "../api/MesasApi";
-import { createResultado } from '../api/ResultadosApi';
+import { createResultado, updateResultado } from '../api/ResultadosApi';
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 // Definimos el componente ResultadosFormPages. 
@@ -75,10 +75,33 @@ export function ResultadosFormPages() {
     };
 
     // Handler for updating results (PUT action)
-    const handleUpdateResults = () => {
-        console.log("Updating results with PUT action:", resultados);
-        // Here goes the code to send the data to the backend with PUT
+    const handleUpdateResults = async () => {
+        try {
+            // Construimos los datos que se enviarán al backend
+            const dataToSend = {
+                mesa: mesaData.numero,
+                partida: mesaData.partida,
+                n_pareja_uno: mesaData.pareja_uno,
+                nombre_pareja_uno: mesaData.nombre_pareja_uno,
+                res_par_uno: parseInt(resultados.resultadoParejaUno),
+                n_pareja_dos: mesaData.pareja_dos,
+                nombre_pareja_dos: mesaData.nombre_pareja_dos,
+                res_par_dos: parseInt(resultados.resultadoParejaDos),
+            };
+            console.log("Data to send:", dataToSend);
+            // Aquí, usarías una función similar a createResultado pero para solicitudes PUT
+            // Suponiendo que "id" es el identificador del recurso que se desea actualizar
+            const response = await updateResultado(id, dataToSend); 
+    
+            if (response.success) {
+                navigate('/mesas-por-numero');  // Navega de vuelta a MesasPorNumero
+                // Manejar el éxito, tal vez navegando a otra página o mostrando un mensaje de éxito
+            }
+        } catch (error) {
+            console.error("Error al actualizar los resultados:", error);
+        }
     };
+    
     // A continuación, renderizamos el componente.
     return (
         <div className="contenedor-principal">
@@ -127,7 +150,7 @@ export function ResultadosFormPages() {
                 esGuardada 
                 ? (
                     <div className="button-container">
-                        <button type="button" className="btn-primary inscripcion-form-button-left">Modificar Resultado Mesa</button>
+                        <button type="button" className="btn-primary inscripcion-form-button-left" onClick={handleUpdateResults}>Modificar Resultado Mesa</button>
                         <button className="btn-danger inscripcion-form-button-right">Eliminar Resultados</button>
                         <div style={{clear: 'both'}}></div> {/* Esto limpia los flotantes para que no afecten a otros elementos */}
                     </div>

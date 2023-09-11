@@ -50,7 +50,6 @@ function App() {
         <Route path="/resultados" element={<ResultadosPages />} />
         <Route path="/resultados-create" element={<ResultadosFormPages />} />
         <Route path="/resultados/:id" element={<ResultadosFormPages />} />
-        <Route path="/resultados/:mesa/:pareja" element={<ResultadosFormPages />} />
       </Routes>
     </BrowserRouter>
   )

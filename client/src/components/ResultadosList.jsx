@@ -23,9 +23,14 @@ export function ResultadosList() {
         <table>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Mesa</th>
                     <th>Partida</th>
+                    <th>Número Pareja Uno</th>
+                    <th>Nombre Pareja Uno</th>
                     <th>Puntos Pareja Uno</th>
+                    <th>Número Pareja Dos</th>
+                    <th>Nombre Pareja Dos</th>
                     <th>Puntos Pareja Dos</th>
                     <th>Resultado Pareja Uno</th>
                     <th>Resultado Pareja Dos</th>
