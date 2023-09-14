@@ -108,6 +108,7 @@ export function ResultadosFormPages() {
     
             if (response.status === 200) {
                 console.log("Resultado actualizado con éxito!");
+                navigate('/mesas-por-numero');  // Navega de vuelta a MesasPorNumero
                 // Aquí puedes agregar más acciones, como mostrar un mensaje de éxito o redireccionar al usuario
             } else {
                 console.error("Error al actualizar el resultado");
