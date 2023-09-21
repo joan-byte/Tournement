@@ -12,13 +12,13 @@ export function MesasPorNumero() {
 
     // Maneja el cambio en los checkboxes y actualiza el estado y localStorage
     const handleCheckboxChange = (numero, event) => {
-        event.stopPropagation();
+        event.stopPropagation(); // Evita que el evento se propague a elementos padre
         const updatedState = {
             ...mesasGuardadas,
-            [numero]: event.target.checked
+            [numero]: event.target.checked // Actualiza el estado de la mesa específica
         };
         setMesasGuardadas(updatedState);
-        localStorage.setItem('mesasGuardadas', JSON.stringify(updatedState));
+        localStorage.setItem('mesasGuardadas', JSON.stringify(updatedState)); // Guarda el estado actualizado en localStorage
     };
 
     // Maneja el clic en una fila, recupera el estado del checkbox y navega a ResultadosFormPages
@@ -38,10 +38,14 @@ export function MesasPorNumero() {
 
     return (
         <div className="container mesas-container">
+            {/* Renderiza el título si hay datos de mesas disponibles */}
             {mesasData.length > 0 && mesasData[0].numero && <h2 className="mesas-title">Partida {mesasData[0].partida}</h2>}
+            
+            {/* Itera y renderiza cada mesa */}
             {mesasData.map((mesa) => (
                 <div key={mesa.numero} className="mesas-item-container">
                     <div className="checkbox-item mesas-flex-center">
+                        {/* Renderiza el checkbox basado en el estado de esGuardada para esa mesa */}
                         <input 
                             type="checkbox" 
                             className="mesas-checkbox"
@@ -51,6 +55,7 @@ export function MesasPorNumero() {
                     </div>
                     <table className="mesas-table">
                         <tbody>
+                            {/* Al hacer clic en una fila, navega a ResultadosFormPages con el estado esGuardada */}
                             <tr onClick={() => handleRowClick(mesa.numero)} className="mesas-row">
                                 <td>{mesa.numero}</td>
                                 <td>{mesa.pareja_uno}</td>

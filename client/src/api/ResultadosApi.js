@@ -15,9 +15,9 @@ export const getResultado = (id) => {return resultadosApi.get(`/${id}/`);};
 export const createResultado = (resultado) => {return resultadosApi.post('/', resultado);};
 
 // Eliminar un resultado específico por ID.
-export const deleteResultado = (id) => {return resultadosApi.delete(`/${id}/`);};
+export const deleteResultado = (resultado_id) => {return resultadosApi.delete(`/${resultado_id}/`);};
 
 // Actualizar un resultado específico por ID.
-export const updateResultado = (id, resultado) => {return resultadosApi.put(`/${id}/`, resultado);};
+export const updateResultado = (resultado_id, resultado) => {return resultadosApi.put(`/${resultado_id}/`, resultado);};
 
 // Aquí podrías agregar cualquier otra función relacionada con resultados si es necesario.

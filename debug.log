@@ -1074,3 +1074,23 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Not Found: /favicon.ico
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /delete/1
+Not Found: /delete/12
+Not Found: /delete/13
+Not Found: /delete/14
+Not Found: /resultados/v1/api/resultados/delete/12
+Not Found: /resultados/api/v1/resultados/14/
+Not Found: /resultados/api/v1/resultados/14/
+Bad Request: /resultados/api/v1/resultados/
+Bad Request: /resultados/api/v1/resultados/
+Not Found: /resultados/api/v1/resultados/14/
+Not Found: /resultados/api/v1/resultados/14/
+Bad Request: /resultados/api/v1/resultados/
+Not Found: /resultados/api/v1/resultados/14/
+Not Found: /resultados/api/v1/resultados/14/

@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { getMesa } from "../api/MesasApi";
-import { createResultado, updateResultado, getResultado} from '../api/ResultadosApi';
+import { createResultado, updateResultado, getResultado, deleteResultado} from '../api/ResultadosApi';
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 // Definimos el componente ResultadosFormPages. 
 export function ResultadosFormPages() {
     // Usamos el hook useForm de react-hook-form para gestionar el formulario.
     const { register } = useForm();
-    
+
     // Usamos el hook useParams para obtener el parámetro `id` de la URL.
     const { id } = useParams();
 
@@ -87,7 +87,7 @@ export function ResultadosFormPages() {
         }
     };
 
-    // Handler for updating results (PUT action)
+    // Handler para modificar resultados (accion PUT )
     const handleUpdateResults = async () => {
         try {
             // Construimos los datos que se enviarán al backend
@@ -117,6 +117,29 @@ export function ResultadosFormPages() {
             console.error("Ocurrió un error al actualizar el resultado:", error);
         }
     };
+    const handleDeleteResults = async () => {
+        try {
+            const response = await deleteResultado(mesaData.resultado_id);
+    
+            if (response.status === 204) {
+                console.log("Resultado eliminado con éxito!");
+    
+                // Actualiza el estado esGuardada en localStorage
+                const mesasGuardadas = JSON.parse(localStorage.getItem('mesasGuardadas')) || {};
+                mesasGuardadas[mesaData.numero] = false;  // Establece el estado esGuardada de la mesa actual a false
+                localStorage.setItem('mesasGuardadas', JSON.stringify(mesasGuardadas));
+    
+                navigate('/mesas-por-numero');  // Navega de vuelta a MesasPorNumero
+                // Aquí puedes agregar más acciones, como mostrar un mensaje de éxito o redireccionar al usuario
+    
+            } else {
+                console.error("Error al eliminar el resultado");
+            }
+        } catch (error) {
+            console.error("Ocurrió un error al eliminar el resultado:", error);
+        }
+    };
+    
     
     
     // A continuación, renderizamos el componente.
@@ -168,7 +191,8 @@ export function ResultadosFormPages() {
                 ? (
                     <div className="button-container">
                         <button type="button" className="btn-primary inscripcion-form-button-left" onClick={handleUpdateResults}>Modificar Resultado Mesa</button>
-                        <button className="btn-danger inscripcion-form-button-right">Eliminar Resultados</button>
+                        <button className="btn-danger inscripcion-form-button-right"
+                        onClick={handleDeleteResults}>Eliminar Resultados Mesa</button>
                         <div style={{clear: 'both'}}></div> {/* Esto limpia los flotantes para que no afecten a otros elementos */}
                     </div>
                 )
