@@ -1094,3 +1094,17 @@ Not Found: /resultados/api/v1/resultados/14/
 Bad Request: /resultados/api/v1/resultados/
 Not Found: /resultados/api/v1/resultados/14/
 Not Found: /resultados/api/v1/resultados/14/
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/12/
+Not Found: /resultados/api/v1/resultados/12/
+Not Found: /mesas/api/v1/mesas/undefined/
+Not Found: /mesas/api/v1/mesas/undefined/
+Not Found: /mesas/api/v1/mesas/undefined/
+Not Found: /mesas/api/v1/mesas/undefined/
+Not Found: /mesas/api/v1/mesas/undefined/
+Not Found: /mesas/api/v1/mesas/undefined/
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/ranking/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

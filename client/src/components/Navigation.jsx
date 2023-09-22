@@ -42,7 +42,6 @@ export function Navigation() {
                     </NavDropdown>
                     {/* Menú desplegable para la sección "Resultados". */}
                     <NavDropdown title="Resultados" id="resultados-dropdown">
-                        <NavDropdown.Item as={Link} to="/resultados-create">Nuevo Resultado</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="/resultados">Lista de Resultados</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
