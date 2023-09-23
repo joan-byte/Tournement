@@ -572,3 +572,9 @@ table td:nth-child(3), table td:nth-child(5) {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+
+/* Adjusting the width of the "Nombre Pareja" column in the "inscripcion-table" to 50% */
+.inscripcion-table td:nth-child(2) {
+    width: 75%;
+}
