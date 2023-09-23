@@ -14,6 +14,7 @@ class Parejas(models.Model):
         self.Nombre_pareja = self.Jugador1 + ' y ' + self.Jugador2  # Concatenación de los campos
         super(Parejas, self).save(*args, **kwargs)
         self.Numero_pareja = self.id  # Set Numero_pareja equal to id after saving
+    
 
     def __str__(self):
         return self.Nombre_pareja
