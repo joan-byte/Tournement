@@ -18,3 +18,5 @@ class Ranking(models.Model):
 
     def __str__(self):
         return f"Ranking para {self.Numero_pareja}"
+    
+   
