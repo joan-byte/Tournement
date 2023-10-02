@@ -28,18 +28,17 @@ def main():
         if created:
             print(f"Creado nuevo registro en Ranking para pareja_uno con número de pareja: {resultado.n_pareja_uno}")
         print(f"Actualizando Ranking de pareja_uno (ID: {ranking_pareja_uno.id}) basado en Resultado con ID: {resultado.id}")
-        actualizar_ranking(resultado)  # Pasar el objeto Resultado
         
-        # Procesando pareja_dos de Resultado
+        # Procesando pareja_dos de Resultado (si existe)
         if resultado.n_pareja_dos:  # Verificar si n_pareja_dos no es None
-            # Obtener instancia de Parejas para pareja_dos
             pareja_dos_instance = Parejas.objects.get(id=resultado.n_pareja_dos)
-            
             ranking_pareja_dos, created = Ranking.objects.get_or_create(Numero_pareja=pareja_dos_instance)
             if created:
                 print(f"Creado nuevo registro en Ranking para pareja_dos con número de pareja: {resultado.n_pareja_dos}")
             print(f"Actualizando Ranking de pareja_dos (ID: {ranking_pareja_dos.id}) basado en Resultado con ID: {resultado.id}")
-            actualizar_ranking(resultado)
+        
+        # Llamar a actualizar_ranking solo una vez por cada registro de Resultado
+        actualizar_ranking(resultado)
 
     print("Finalizó el script de población y actualización desde Resultados.")
 

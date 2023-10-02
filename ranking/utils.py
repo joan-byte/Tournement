@@ -1,4 +1,5 @@
 from django.db.models import F
+from resultados.models import Resultado
 from inscripcion.models import Parejas  
 
 def actualizar_ranking(resultado):
@@ -7,9 +8,6 @@ def actualizar_ranking(resultado):
     Esta función toma un objeto Resultado y actualiza el ranking de las parejas involucradas.
     """
     print("Iniciando la actualización del ranking...")
-
-    # Reordering the Ranking database by rank
-    all_rankings = Ranking.objects.all().order_by('rank')
 
     # Actualizar el ranking de la pareja_uno si es válido
     if resultado.n_pareja_uno and resultado.n_pareja_uno != 0:
@@ -45,5 +43,4 @@ def actualizar_ranking(resultado):
         ranking.rank = rank_position
         ranking.save()
         rank_position += 1
-    # Reordering the Ranking database by rank
-    all_rankings = Ranking.objects.all().order_by('rank')
+    
