@@ -11,7 +11,8 @@ def actualizar_ranking(resultado):
 
     # Actualizar el ranking de la pareja_uno si es válido
     if resultado.n_pareja_uno and resultado.n_pareja_uno != 0:
-        ranking_pareja_uno, _ = Ranking.objects.get_or_create(Numero_pareja=resultado.n_pareja_uno)
+        pareja_uno_instance, _ = Parejas.objects.get_or_create(Numero_pareja=resultado.n_pareja_uno)
+        ranking_pareja_uno, _ = Ranking.objects.get_or_create(Numero_pareja=pareja_uno_instance)
         ranking_pareja_uno.Nombre_pareja = resultado.nombre_pareja_uno
         ranking_pareja_uno.puntos = (ranking_pareja_uno.puntos if ranking_pareja_uno.puntos else 0) + resultado.puntos_pareja_uno
         ranking_pareja_uno.partida = (ranking_pareja_uno.partida if ranking_pareja_uno.partida else 0) + 1
