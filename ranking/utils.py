@@ -1,6 +1,7 @@
 from django.db.models import F
 from resultados.models import Resultado
 from inscripcion.models import Parejas  
+from resultados.state import previous_points 
 
 def actualizar_ranking(resultado):
     from .models import Ranking
@@ -25,6 +26,9 @@ def actualizar_ranking(resultado):
             ranking_pareja_uno.partidas_ganadas = 1
         else:
             ranking_pareja_uno.partidas_ganadas = 0
+        # Restar puntos anteriores si existen
+        if resultado.pk in previous_points:
+            ranking_pareja_uno.puntos -= previous_points[resultado.pk]['pareja_uno']
         ranking_pareja_uno.save()
         print(f"Pareja uno ({resultado.n_pareja_uno}): {resultado.puntos_pareja_uno} puntos.")
 
@@ -41,6 +45,9 @@ def actualizar_ranking(resultado):
             ranking_pareja_dos.partidas_ganadas = 1
         else:
             ranking_pareja_dos.partidas_ganadas = 0
+        # Restar puntos anteriores si existen
+        if resultado.pk in previous_points:
+            ranking_pareja_dos.puntos -= previous_points[resultado.pk]['pareja_dos']
         ranking_pareja_dos.save()
         print(f"Pareja dos ({resultado.n_pareja_dos}): {resultado.puntos_pareja_dos} puntos.")
 

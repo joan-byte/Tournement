@@ -1690,3 +1690,259 @@ Not Found: /resultados/api/v1/resultados/29/
 Not Found: /resultados/api/v1/resultados/29/
 Not Found: /resultados/api/v1/resultados/18/
 Not Found: /resultados/api/v1/resultados/18/
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/35/
+Not Found: /resultados/api/v1/resultados/35/
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/ranking/utils.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/ranking/utils.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /resultados/api/v1/resultados/36/
+Traceback (most recent call last):
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/resultados/models.py", line 73, in post_delete_resultado
+    Ranking.objects.filter(Numero_pareja=instance.n_pareja_uno).delete()
+    ^^^^^^^
+NameError: name 'Ranking' is not defined
+Not Found: /resultados/api/v1/resultados/36/
+Not Found: /resultados/api/v1/resultados/36/
+/Users/joanat/Development/Tournement/ranking/utils.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/ranking/utils.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/37/
+Not Found: /resultados/api/v1/resultados/37/
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/38/
+Not Found: /resultados/api/v1/resultados/38/
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/39/
+Not Found: /resultados/api/v1/resultados/39/
+Internal Server Error: /resultados/api/v1/resultados/40/
+Traceback (most recent call last):
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/resultados/models.py", line 70, in post_delete_resultado
+    Ranking.objects.filter(Numero_pareja=instance.n_pareja_uno).delete()
+    ^^^^^^^
+NameError: name 'Ranking' is not defined
+Internal Server Error: /resultados/api/v1/resultados/40/
+Traceback (most recent call last):
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/resultados/models.py", line 70, in post_delete_resultado
+    Ranking.objects.filter(Numero_pareja=instance.n_pareja_uno).delete()
+    ^^^^^^^
+NameError: name 'Ranking' is not defined
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /resultados/api/v1/resultados/40/
+Traceback (most recent call last):
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/resultados/models.py", line 71, in post_delete_resultado
+    Ranking.objects.filter(Numero_pareja=instance.n_pareja_uno).delete()
+    ^^^^^^^
+NameError: name 'Ranking' is not defined
+Internal Server Error: /resultados/api/v1/resultados/40/
+Traceback (most recent call last):
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1132, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/db/models/deletion.py", line 512, in delete
+    signals.post_delete.send(
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/Users/joanat/Development/Tournement/venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joanat/Development/Tournement/resultados/models.py", line 71, in post_delete_resultado
+    Ranking.objects.filter(Numero_pareja=instance.n_pareja_uno).delete()
+    ^^^^^^^
+NameError: name 'Ranking' is not defined
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/joanat/Development/Tournement/resultados/models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /resultados/api/v1/resultados/40/
+Not Found: /resultados/api/v1/resultados/40/
+Not Found: /resultados/api/v1/resultados/40/
+Not Found: /resultados/api/v1/resultados/40/
