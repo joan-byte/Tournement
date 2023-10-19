@@ -1,20 +1,14 @@
 from django.db.models import F
 from resultados.models import Resultado
 from inscripcion.models import Parejas  
-from resultados.state import previous_points 
+
+previous_points = {}
 
 def actualizar_ranking(resultado):
     from .models import Ranking
 
-    # Verificando si los números de pareja son válidos antes de continuar
-    if not resultado.n_pareja_uno or not resultado.n_pareja_dos:
-        print("Error: Los números de pareja no son válidos.")
-        return
-
-    print("Iniciando la actualización del ranking...")
-
     # Actualizar el ranking de la pareja_uno si es válido
-    if resultado.n_pareja_uno and resultado.n_pareja_uno != 0:
+    if resultado.n_pareja_uno:
         pareja_uno_instance, created = Parejas.objects.get_or_create(id=resultado.n_pareja_uno)
         if created:
             print(f"Creada nueva instancia de Parejas para pareja_uno con número {resultado.n_pareja_uno}")
@@ -26,14 +20,16 @@ def actualizar_ranking(resultado):
             ranking_pareja_uno.partidas_ganadas = 1
         else:
             ranking_pareja_uno.partidas_ganadas = 0
+        
         # Restar puntos anteriores si existen
         if resultado.pk in previous_points:
             ranking_pareja_uno.puntos -= previous_points[resultado.pk]['pareja_uno']
+
         ranking_pareja_uno.save()
         print(f"Pareja uno ({resultado.n_pareja_uno}): {resultado.puntos_pareja_uno} puntos.")
 
     # Actualizar el ranking de la pareja_dos si es válido
-    if resultado.n_pareja_dos and resultado.n_pareja_dos != 0:
+    if resultado.n_pareja_dos:
         pareja_dos_instance, created = Parejas.objects.get_or_create(id=resultado.n_pareja_dos)
         if created:
             print(f"Creada nueva instancia de Parejas para pareja_dos con número {resultado.n_pareja_dos}")
@@ -45,9 +41,11 @@ def actualizar_ranking(resultado):
             ranking_pareja_dos.partidas_ganadas = 1
         else:
             ranking_pareja_dos.partidas_ganadas = 0
+        
         # Restar puntos anteriores si existen
         if resultado.pk in previous_points:
             ranking_pareja_dos.puntos -= previous_points[resultado.pk]['pareja_dos']
+
         ranking_pareja_dos.save()
         print(f"Pareja dos ({resultado.n_pareja_dos}): {resultado.puntos_pareja_dos} puntos.")
 
