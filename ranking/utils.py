@@ -19,7 +19,7 @@ def actualizar_ranking(resultado):
         else:
             ranking_pareja_uno.puntos += resultado.puntos_pareja_uno
 
-        ranking_pareja_uno.partida = (ranking_pareja_uno.partida if ranking_pareja_uno.partida else 0) + 1
+        ranking_pareja_uno.partida = resultado.partida
         if resultado.puntos_pareja_uno > 0:
             ranking_pareja_uno.partidas_ganadas = 1
         else:
@@ -39,7 +39,7 @@ def actualizar_ranking(resultado):
         else:
             ranking_pareja_dos.puntos += resultado.puntos_pareja_dos
 
-        ranking_pareja_dos.partida = (ranking_pareja_dos.partida if ranking_pareja_dos.partida else 0) + 1
+        ranking_pareja_dos.partida = resultado.partida
         if resultado.puntos_pareja_dos > 0:
             ranking_pareja_dos.partidas_ganadas = 1
         else:
