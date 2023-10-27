@@ -7,13 +7,13 @@ function RankingCard({ ranking }) {
     // Renderizado del componente.
     return (
         <tr className="ranking-table" style={{cursor: 'default'}}>
-            <td className="centered">{ranking.Numero_pareja.id}</td>
-            <td className="centered">{ranking.Nombre_pareja}</td>
-            <td className="centered">{ranking.partida}</td>
-            <td className="centered">{ranking.rank}</td>
-            <td className="centered">{ranking.serieB ? "Sí" : "No"}</td>
+            <td className="centered">{ranking.Numero_pareja}</td>
+            <td className="centered">{ranking.serieB ? "B" : "A"}</td>
             <td className="centered">{ranking.partidas_ganadas}</td>
             <td className="centered">{ranking.puntos}</td>
+            <td className="centered">{ranking.Nombre_pareja}</td>
+            <td className="centered">{ranking.partida}</td>
+
         </tr>
     );
 }
