@@ -11,6 +11,8 @@ import {MesasFormPages} from './pages/MesasFormPages';  // Importación de Mesas
 import {MesasPorNumero} from './pages/MesasPorNumero'; // Importación de MesasPorNumero. 
 import ResultadosPages from './pages/ResultadosPages';  // Importación de ResultadosPages
 import {ResultadosFormPages} from './pages/ResultadosFormPages';  // Importación de ResultadosFormPages
+import {RankingPages} from './pages/RankingPages';  // Importación de RankingPages
+import {RankingFormPages} from './pages/RankingFormPages';  // Importación de RankingFormPages
 
 // Importamos el componente de navegación.
 import {Navigation} from './components/Navigation/';
@@ -50,6 +52,10 @@ function App() {
         <Route path="/resultados" element={<ResultadosPages />} />
         <Route path="/resultados-create" element={<ResultadosFormPages />} />
         <Route path="/resultados/:id" element={<ResultadosFormPages />} />
+        // Rutas relacionadas con ranking.
+        <Route path="/ranking" element={<RankingPages />} />
+        <Route path="/ranking/add" element={<RankingFormPages />} />
+        <Route path="/ranking/edit/:id" element={<RankingFormPages />} />
       </Routes>
     </BrowserRouter>
   )

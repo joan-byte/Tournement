@@ -43,7 +43,9 @@ export function Navigation() {
                     {/* Menú desplegable para la sección "Resultados". */}
                     <NavDropdown title="Resultados" id="resultados-dropdown">
                         <NavDropdown.Item as={Link} to="/resultados">Lista de Resultados</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/ranking">Ranking</NavDropdown.Item>
                     </NavDropdown>
+
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
