@@ -18,24 +18,30 @@ export function RankingList() {
 
     // Renderizado del componente.
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Número Pareja</th>
-                    <th>Serie</th>
-                    <th>Partidas Ganadas</th>
-                    <th>Puntos</th>
-                    <th>Nombre Pareja</th>
-                    <th>Partida</th>
+        <div>
+            <button>Cerrar Partida</button>
+            <button>Abrir Partida</button>
+            <table>
+        
+                <thead>
+                    <tr>
+                        <th>Número Pareja</th>
+                        <th>Serie</th>
+                        <th>Partidas Ganadas</th>
+                        <th>Puntos</th>
+                        <th>Nombre Pareja</th>
+                        <th>Partida</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                {rankings.map((ranking) => (
-                    <RankingCard key={ranking.id} ranking={ranking} />
-                ))}
-            </tbody>
-        </table>
+                    </tr>
+                </thead>
+                <tbody>
+                    {rankings.map((ranking) => (
+                        <RankingCard key={ranking.id} ranking={ranking} />
+                    ))}
+                </tbody>
+            </table>
+        </div>
+        
     );
 }
 
